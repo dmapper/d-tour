@@ -71,13 +71,6 @@ module.exports = (Shepherd) ->
           action: tour.next
 
         # Button that ends the part of guide on the current page
-        # To create a multi-page guide:
-        # 1. Add 'nextSection' button to the tour's step you want to be the last
-        #     on the current page.
-        # 2. Add 'nextUrl' argument to the guide component call in the view
-        #     and provide the url that should be loaded next
-        # 3. On a new page add 'guide' component with the same tour and
-        #     'continue' argument with the name of a step to start from.
         when 'nextSection'
           text: 'Next'
           action: =>
