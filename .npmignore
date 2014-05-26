@@ -1,0 +1,6 @@
+/.idea/
+*.orig
+/tmp/
+
+# Bower installation
+/bower_components/

@@ -1,0 +1,33 @@
+// -------------------------------------
+//   Shepherd
+// -------------------------------------
+
+@import './dist/vendor/css/shepherd-theme-arrows.css'
+
+$font-helvetica ?= "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.shepherd-theme-arrows
+  z-index 2
+  h3
+    font-family $font-helvetica
+    text-align left
+  .shepherd-content
+    width 400px
+    max-width 100%
+    filter drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4)) !important
+
+.shepherd-active
+  body
+    position relative
+    &:before
+      content ''
+      position absolute
+      left 0
+      top 0
+      right 0
+      bottom 0
+      background-color rgba(white, 0.9)
+      z-index 2
+  .shepherd-enabled
+    position relative
+    z-index 3

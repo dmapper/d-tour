@@ -1,0 +1,17 @@
+{
+  "name": "local-d-guide",
+  "version": "0.0.0",
+  "dependencies": {
+    "shepherd": "git://github.com/HubSpot/shepherd#master"
+  },
+  "exportsOverride": {
+    "shepherd": {
+      "js": "shepherd-amd.js",
+      "css": "css/shepherd-theme-arrows.css"
+    },
+    "tether": {
+      "js": "tether.js"
+    },
+    "*": {}
+  }
+}

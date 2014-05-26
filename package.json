@@ -1,0 +1,30 @@
+{
+  "name": "local-d-guide",
+  "publishConfig": {
+    "registry": "http://npm.idecisiongames.com/"
+  },
+  "description": "Derby.js guide plugin",
+  "version": "0.1.0",
+  "main": "index.coffee",
+  "scripts": {
+    "prepublish": "grunt build"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "lodash": "*"
+  },
+  "browser": {
+    "tether": "./dist/vendor/js/tether.js",
+    "shepherd": "./dist/vendor/js/shepherd-amd.js"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-notify": "*",
+    "grunt-bower-task": "*",
+    "load-grunt-tasks": "*"
+  }
+}
