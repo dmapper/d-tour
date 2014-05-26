@@ -7,8 +7,8 @@
 
 
 ## Usage
-```jade
-view(name='guide', tour='{{dummyTour}}', autostart)
+```coffee
+app.use require('local-d-guide')
 ```
 
 ```coffee
@@ -20,6 +20,10 @@ dummyTour =
           '''
     attachTo: 'body > *:first-child top'
     buttons: ['done']
+```
+
+```jade
+view(name='guide', tour='{{dummyTour}}', autostart)
 ```
 
 You can choose from 5 predefined buttons:
