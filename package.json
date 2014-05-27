@@ -23,6 +23,9 @@
     "grunt": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-cssmin": "*",
     "grunt-notify": "*",
     "grunt-bower-task": "*",
     "load-grunt-tasks": "*"
