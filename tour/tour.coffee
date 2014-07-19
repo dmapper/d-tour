@@ -11,8 +11,8 @@ dummyTour =
 
 module.exports = (Shepherd) ->
 
-  class Guide
-    name: 'guide'
+  class Tour
+    name: 'tour'
 
     init: ->
       @model.setNull 'tour', dummyTour
@@ -70,7 +70,7 @@ module.exports = (Shepherd) ->
           text: 'Done'
           action: tour.next
 
-        # Button that ends the part of guide on the current page
+        # Button that ends the part of tour on the current page
         when 'nextSection'
           text: 'Next'
           action: =>

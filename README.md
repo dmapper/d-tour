@@ -13,16 +13,16 @@ app.use require('d-tour')
 ```coffee
 dummyTour =
   'first step':
-    title: 'Hello guide!'
+    title: 'Hello tour!'
     text: '''
-            This is a dummy guide step
+            This is a dummy tour step
           '''
     attachTo: 'body > *:first-child top'
     buttons: ['done']
 ```
 
 ```jade
-view(name='guide', tour='{{dummyTour}}', autostart)
+view(name='tour', tour='{{dummyTour}}', autostart)
 ```
 
 You can choose from 5 predefined buttons:
@@ -30,14 +30,25 @@ You can choose from 5 predefined buttons:
 `next`, `back`, `done`, `exit`, `nextSection`
 
 
-## Multi-page guide
-You can create a guide which guides user through several pages:
+## Autostart and Manual tour start
+
+Providing `autostart` argument tells tour to start right after component renders. 
+If you rather want to start tour manually just run its `start()` method:
+
+```jade
+view(name='tour', as='tour', tour='{{dummyTour}}')
+button(on-click='tour.start()') Start guide!
+```
+
+
+## Multi-page tour
+You can create a tour which guides user through several pages:
 
 1. Add `nextSection` button to the tour's step you want to be the last
     on the current page.
-2. Add `nextUrl` argument to the guide component call in the view
+2. Add `nextUrl` argument to the `tour` component call in the view
     and provide the url that should be loaded next
-3. On a new page add 'guide' component with the same tour and
+3. On a new page add `tour` component with the same tour and
     `continue` argument with the name of a step to start from.
 
 ### Example:
@@ -65,10 +76,10 @@ multipageTour =
 
 `/home` page:
 ```jade
-view(name='guide', tour='{{multipageTour}}', nextUrl='/about', autostart)
+view(name='tour', tour='{{multipageTour}}', nextUrl='/about', autostart)
 ```
 
 `/about` page:
 ```jade
-view(name='guide', tour='{{multipageTour}}', continue='about step', autostart)
+view(name='tour', tour='{{multipageTour}}', continue='about step', autostart)
 ```
