@@ -1,14 +1,13 @@
-# d-guide
+# d-tour
 
-> Guide plugin for Derby.js.
+> Tour guide plugin for Derby.js
 >
 > Uses [Shepherd.js](http://github.hubspot.com/shepherd/docs/welcome/)
 
 
-
 ## Usage
 ```coffee
-app.use require('local-d-guide')
+app.use require('d-tour')
 ```
 
 ```coffee

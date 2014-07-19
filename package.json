@@ -1,10 +1,11 @@
 {
-  "name": "local-d-guide",
-  "publishConfig": {
-    "registry": "http://npm.idecisiongames.com/"
-  },
-  "description": "Derby.js guide plugin",
+  "name": "d-tour",
+  "description": "Tour guide plugin for Derby.js",
   "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dmapper/d-tour.git"
+  },
   "main": "index.coffee",
   "scripts": {
     "prepublish": "grunt build"
