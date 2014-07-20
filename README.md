@@ -49,7 +49,7 @@ You can create a tour which guides user through several pages:
 2. Add `nextPage` argument to the `tour` component call in the view
     and provide the url that should be loaded next
 3. On a new page add `tour` component with the same tour and
-    `continue` argument with the name of a step to start from.
+    `startFrom` argument with the name of a step to start from.
 
 ### Example:
 
@@ -81,5 +81,5 @@ view(name='tour', tour='{{multipageTour}}', nextPage='/about', autostart)
 
 `/about` page:
 ```jade
-view(name='tour', tour='{{multipageTour}}', continue='about step', autostart)
+view(name='tour', tour='{{multipageTour}}', startFrom='about step', autostart)
 ```

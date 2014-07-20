@@ -22,7 +22,7 @@ module.exports = (Shepherd) ->
 
     start: ->
       @_createTour(@model.get 'tour')
-      if startFromStep = @model.get('continue')
+      if startFromStep = @model.get('startFrom')
         @tour.show(startFromStep)
       else
         @tour.start()
