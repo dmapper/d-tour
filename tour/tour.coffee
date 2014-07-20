@@ -76,7 +76,7 @@ module.exports = (Shepherd) ->
           action: =>
             @completeShepherd()
             tour.hide()
-            @emit 'sectionEnd'
+            @emit 'nextPage'
             if nextPage = @model.get('nextPage')
               @app.history.push nextPage
 

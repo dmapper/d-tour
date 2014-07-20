@@ -51,6 +51,7 @@ You can create a tour which guides user through several pages:
 3. On a new page add `tour` component with the same tour and
     `startFrom` argument with the name of a step to start from.
 
+
 ### Example:
 
 ```coffee
@@ -83,3 +84,11 @@ view(name='tour', tour='{{multipageTour}}', nextPage='/about', autostart)
 ```jade
 view(name='tour', tour='{{multipageTour}}', startFrom='about step', autostart)
 ```
+
+
+## Emitted events
+
+Tour emits following events:
+
+1. `complete` - after tour is completed
+2. `nextPage` - before going to the new page in multipage tour 
