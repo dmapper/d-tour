@@ -92,3 +92,8 @@ Tour emits following events:
 
 1. `complete` - after tour is completed
 2. `nextPage` - before going to the new page in multipage tour 
+
+
+## Licence
+
+MIT
