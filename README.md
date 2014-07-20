@@ -44,9 +44,9 @@ button(on-click='tour.start()') Start guide!
 ## Multi-page tour
 You can create a tour which guides user through several pages:
 
-1. Add `nextSection` button to the tour's step you want to be the last
+1. Add `nextPage` button to the tour's step you want to be the last
     on the current page.
-2. Add `nextUrl` argument to the `tour` component call in the view
+2. Add `nextPage` argument to the `tour` component call in the view
     and provide the url that should be loaded next
 3. On a new page add `tour` component with the same tour and
     `continue` argument with the name of a step to start from.
@@ -62,7 +62,7 @@ multipageTour =
             I'm on first page
           '''
     attachTo: 'body > *:first-child top'
-    buttons: ['exit', 'nextSection']
+    buttons: ['exit', 'nextPage']
 
   'about step':
     title: 'second step!'
@@ -76,7 +76,7 @@ multipageTour =
 
 `/home` page:
 ```jade
-view(name='tour', tour='{{multipageTour}}', nextUrl='/about', autostart)
+view(name='tour', tour='{{multipageTour}}', nextPage='/about', autostart)
 ```
 
 `/about` page:

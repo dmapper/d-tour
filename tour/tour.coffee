@@ -71,13 +71,13 @@ module.exports = (Shepherd) ->
           action: tour.next
 
         # Button that ends the part of tour on the current page
-        when 'nextSection'
+        when 'nextPage'
           text: 'Next'
           action: =>
             @completeShepherd()
             tour.hide()
             @emit 'sectionEnd'
-            if nextPage = @model.get('nextUrl')
+            if nextPage = @model.get('nextPage')
               @app.history.push nextPage
 
         else
