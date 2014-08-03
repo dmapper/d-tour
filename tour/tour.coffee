@@ -62,7 +62,7 @@ module.exports = (Shepherd) ->
           text: 'Exit'
           classes: 'shepherd-button-secondary'
           action: =>
-            @completeShepherd()
+            @_completeShepherd()
             tour.hide()
             @emit 'complete'
 
@@ -74,7 +74,7 @@ module.exports = (Shepherd) ->
         when 'nextPage'
           text: 'Next'
           action: =>
-            @completeShepherd()
+            @_completeShepherd()
             tour.hide()
             @emit 'nextPage'
             if nextPage = @model.get('nextPage')
